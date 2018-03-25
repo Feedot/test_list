@@ -1,0 +1,11 @@
+{
+  "items":[
+    {"id":1,"name":"First item with custom name","number":0},
+    {"id":2,"name":"Second item is active","number":0}
+  ],
+  "comments":[
+    {"img":"./images/oranges.png","id":1,"user":false,"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at aut dolor ea explicabo ipsum laboriosam minus mollitia omnis pariatur quae, quam rem temporibus voluptatum. Error iure nihil saepe."},
+    {"img":"./images/blue.png","id":2,"user":false,"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at aut dolor ea explicabo ipsum laboriosam minus mollitia omnis pariatur quae, quam rem temporibus voluptatum. Error iure nihil saepe."},
+    {"img":"./images/oranges.png","id":3,"user":false,"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at aut dolor ea explicabo ipsum laboriosam minus mollitia omnis pariatur quae, quam rem temporibus voluptatum. Error iure nihil saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at aut dolor ea explicabo ipsum laboriosam minus mollitia omnis pariatur quae, quam rem temporibus voluptatum. Error iure nihil saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at aut dolor ea explicabo ipsum laboriosam minus mollitia omnis pariatur quae, quam rem temporibus voluptatum. Error iure nihil saepe."}
+  ]
+}

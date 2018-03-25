@@ -1,0 +1,6 @@
+form p {
+    display: none;
+}
+form p.active{
+    display: block;
+}
