@@ -9,9 +9,7 @@ class CommentList extends Component {
         this.state={ field:false }
 
     }
-    componentWillMount(){
-        console.log(this.props.state)
-    }
+
     onKeyUp = e =>{
 
         let { data, addComment } = this.props, newId = data[data.length-1].id,
@@ -25,19 +23,20 @@ class CommentList extends Component {
         ((e.ctrlKey && e.keyCode === 13) && empty === "") && this.setState({field:true});
 
     }
+
     delItem = id => this.props.deleteComment(id);
 
     componentDidUpdate(){ this.state.field && setTimeout( () => this.setState({ field : false }), 3000 ) }
 
     render(){
-        const {data} = this.props, {onKeyUp, delItem, state } = this;
+        const { data } = this.props, {onKeyUp, delItem, state } = this;
         return(
             <div>
                 <h1>Comments #2</h1>
                 {data.map((data,key) => <CommentItem {...{data,key,delItem}}/>)}
                 <form className="add_comment">
                     <div>
-                        <img src="../../images/light.png"/>
+                        <img src="images/light.png"/>
                     </div>
                     <textarea ref={txar => this.txar = txar} {...{onKeyUp}}/>
                     <p className={ state.field ? "active": null}>Field is empty</p>

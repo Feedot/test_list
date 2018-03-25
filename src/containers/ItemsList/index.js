@@ -12,6 +12,8 @@ class ItemsList extends Component {
 
     deleteItem = id => this.props.deleteItem(id);
 
+    toogleItem = key => this.setState({active:key});
+
     onSubmit = e => {
 
         let {data, addNewItem } = this.props, newId = data[data.length-1].id,
@@ -27,20 +29,17 @@ class ItemsList extends Component {
         e.preventDefault()
 
     }
-    toogleItem = (key) => { this.setState({active:key})}
 
     componentWillMount() {
-        // localStorage.removeItem('items');
-        // localStorage.removeItem('comments');
         const {takeAsyncData,takeStorageData} =  this.props;
         !localStorage.getItem('items') ? takeAsyncData() : takeStorageData();
     }
+
     componentDidUpdate(){ this.state.name && setTimeout( () => this.setState({ name:false }), 3000 ) }
 
     render(){
+        let { deleteItem, onSubmit, state, toogleItem } = this, { data } = this.props;
 
-        let { deleteItem, onSubmit, state, toogleItem } = this,
-            { data } = this.props;
         return(
             <div>
                 <h1>Items</h1>
