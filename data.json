@@ -1,7 +1,7 @@
 {
   "items":[
-    {"id":1,"name":"First item with custom name","number":0},
-    {"id":2,"name":"Second item is active","number":0}
+    {"id":1,"name":"First item with custom name","number":132},
+    {"id":2,"name":"Second item is active","number":3}
   ],
   "comments":[
     {"img":"./images/oranges.png","id":1,"user":false,"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at aut dolor ea explicabo ipsum laboriosam minus mollitia omnis pariatur quae, quam rem temporibus voluptatum. Error iure nihil saepe."},
