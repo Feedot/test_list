@@ -12,7 +12,7 @@ class ItemsList extends Component {
 
     deleteItem = id => this.props.deleteItem(id);
 
-    toogleItem = key => this.setState({active:key});
+    toogleItem = active => this.setState({ active });
 
     onSubmit = e => {
 
@@ -43,7 +43,7 @@ class ItemsList extends Component {
         return(
             <div>
                 <h1>Items</h1>
-                <form {...{ className:"add_form",onSubmit }}>
+                <form {...{ className:"add_form", onSubmit }}>
                     <input ref={ input => this.input = input}
                            placeholder= "Type name here..."
                            required/>
@@ -52,7 +52,7 @@ class ItemsList extends Component {
                 </form>
                 { data.length && data.map((data,key) =>
                     <Item {...{ key, num:key, data, toogleItem, deleteItem,
-                        active: (key === this.state.active) && true || false }}/> )}
+                        active: (key === state.active) && true || false }}/> )}
             </div>
         )
     }

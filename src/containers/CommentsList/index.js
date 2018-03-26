@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 class CommentList extends Component {
     constructor(){
         super();
-        this.state={ field:false }
+        this.state = { field:false }
 
     }
 
@@ -16,11 +16,11 @@ class CommentList extends Component {
             id = ++newId, text = this.txar.value, user = true,
             empty = this.txar.value.replace(/\s/g,"");
 
-        if((e.ctrlKey && e.keyCode === 13) && empty !== "") {
-            addComment({id,text,user,img:"./images/light.png"});
+        if((e.ctrlKey && e.keyCode === 13) && empty !== "" ) {
+            addComment({ id, text, user, img:"./images/light.png" });
             this.txar.value = ""
         }
-        ((e.ctrlKey && e.keyCode === 13) && empty === "") && this.setState({field:true});
+        ((e.ctrlKey && e.keyCode === 13) && empty === "" ) && this.setState({field:true});
 
     }
 
@@ -29,17 +29,17 @@ class CommentList extends Component {
     componentDidUpdate(){ this.state.field && setTimeout( () => this.setState({ field : false }), 3000 ) }
 
     render(){
-        const { data } = this.props, {onKeyUp, delItem, state } = this;
+        const { data } = this.props, { onKeyUp, delItem, state } = this;
         return(
             <div>
                 <h1>Comments #2</h1>
-                {data.map((data,key) => <CommentItem {...{data,key,delItem}}/>)}
+                {data.map((data,key) => <CommentItem {...{ data,key,delItem }} />)}
                 <form className="add_comment">
                     <div>
                         <img src="images/light.png"/>
                     </div>
-                    <textarea ref={txar => this.txar = txar} {...{onKeyUp}}/>
-                    <p className={ state.field ? "active": null}>Field is empty</p>
+                    <textarea ref={txar => this.txar = txar} {...{ onKeyUp }} />
+                    <p className={ state.field ? "active" : null}>Field is empty</p>
                 </form>
             </div>
         )
