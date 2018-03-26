@@ -1,9 +1,9 @@
 import { createStore, compose } from "redux";
 
 import reducers from "./reducers/index";
-import middleware from './middleware/index'
+import middleware from "./middleware/index";
 
-const initialState = {items:[], comments:[]};
+const initialState = { items: [], comments: [] };
 const enhancers = [];
 
 if (process.env.NODE_ENV === "development") {
