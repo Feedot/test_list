@@ -5,8 +5,8 @@ const Item = props => {
     { id, name, number } = data;
   return (
     <div
-      onClick={() => toogleItem(num)}
-      className={active ? "item_wrapper active" : "item_wrapper"}
+      onClick={ () => toogleItem(num) }
+      className={ active ? "item_wrapper active" : "item_wrapper" }
     >
       <p>
         {name}

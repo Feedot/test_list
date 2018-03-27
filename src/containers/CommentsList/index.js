@@ -20,10 +20,7 @@ class CommentList extends Component {
       addComment({ id, text, user, img: "./images/light.png" });
       this.txar.value = "";
     }
-    e.ctrlKey &&
-      e.keyCode === 13 &&
-      empty === "" &&
-      this.setState({ field: true });
+    e.ctrlKey && e.keyCode === 13 && empty === "" && this.setState({ field: true });
   };
 
   delItem = id => this.props.deleteComment(id);
@@ -38,13 +35,13 @@ class CommentList extends Component {
     return (
       <div>
         <h1>Comments #2</h1>
-        {data.map((data, key) => <CommentItem {...{ data, key, delItem }} />)}
+        {data.map((data, key) => <CommentItem  {...{ data, key, delItem }} />)}
         <form className="add_comment">
           <div>
             <img src="images/light.png" />
           </div>
-          <textarea ref={txar => (this.txar = txar)} {...{ onKeyUp }} />
-          <p className={state.field ? "active" : null}>Field is empty</p>
+          <textarea ref={ txar => (this.txar = txar) } {...{ onKeyUp }} />
+          <p className={ state.field ? "active" : null }>Field is empty</p>
         </form>
       </div>
     );

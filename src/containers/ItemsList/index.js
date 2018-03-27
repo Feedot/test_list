@@ -56,7 +56,7 @@ class ItemsList extends Component {
             required
           />
           <button type="submit">Add new</button>
-          <p className={state.name ? "active" : null}>
+          <p className={ state.name ? "active" : null }>
             This item has already existed
           </p>
         </form>
